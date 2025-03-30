@@ -2,9 +2,9 @@ import React from "react";
 import "../assets/style/confirm_modal.css";
 
 function ConfirmModal({
-  isOpen = "True",
+  isOpen = true,
   onClose = () => {
-    alert("salam");
+    isOpen = !isOpen;
   },
   title,
   message = `Çıxmaq istədikdən əminmisiniz? <strong><br>Bütün dəyişiklikləriniz silinəcək!</strong>`,

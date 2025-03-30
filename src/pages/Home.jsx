@@ -1,14 +1,11 @@
 import React from "react";
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
-import AppRoutes from "../routes/AppRoutues";
-import ConfirmModal from "../components/ConfirmModal";
+
+import ActivityCard from "../components/ActivityCard";
 
 function Home() {
   return (
     <>
-      <h1>Home Page</h1>
-      <ConfirmModal />
+      <ActivityCard />
     </>
   );
 }

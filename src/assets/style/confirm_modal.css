@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Futura Bold";
+  src: url("../../fonts/futura/Futura-Bold.woff2") format("woff2"),
+    url("../../fonts/futura/Futura-Bold.woff") format("woff"),
+    url("../../fonts/futura/Futura-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  font-family: "Futura Bold";
+}
+
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -40,6 +53,7 @@
 }
 
 .modal-message {
+  font-family: "Futura Bold";
   font-size: 16px;
   color: #555;
   line-height: 1.5;
