@@ -1,0 +1,65 @@
+.header {
+  .header_content {
+    padding: 30px 70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > .logo_part {
+      > img {
+        width: 130px;
+        height: 57.541px;
+        flex-shrink: 0;
+        aspect-ratio: 130/57.54;
+      }
+    }
+    > .right_part {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      > .notification_icon_part {
+        position: relative;
+        > img {
+          width: 25px;
+          height: 25px;
+          flex-shrink: 0;
+        }
+        > span {
+          position: absolute;
+          height: 8px;
+          width: 8px;
+          background-color: red;
+          border-radius: 100%;
+          left: 14px;
+          top: 2px;
+        }
+        > .before {
+          animation: sparkle 2s ease infinite;
+        }
+        > .afteer {
+          animation: sparkle 4s ease infinite;
+        }
+      }
+      > .profile_icon_part {
+        > img {
+          width: 25px;
+          height: 25px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}
+
+/* Animations */
+@keyframes sparkle {
+  0% {
+    opacity: 100%;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0%;
+    transform: scale(1.7);
+  }
+}
