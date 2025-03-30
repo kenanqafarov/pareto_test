@@ -1,42 +1,64 @@
 import React from "react";
-
-// Icons
-import poster from "../assets/images/activity_card/poster.png";
-import calendar from "../assets/images/activity_card/icons/calendar.svg";
-import clock from "../assets/images/activity_card/icons/clock.svg";
-import location from "../assets/images/activity_card/icons/location.svg";
+import { Link } from "react-router-dom";
 
 // Style
 import "../assets/style/ActivityCard/card.css";
+import poster from "../assets/images/activity_card/poster.png";
 
-function ActivityCard() {
+// Icons
+import locationIcon from "../assets/images/activity_card/icons/location.svg";
+import clockIcon from "../assets/images/activity_card/icons/clock.svg";
+import calendarIcon from "../assets/images/activity_card/icons/calendar.svg";
+
+function ActivityCard({
+  image = poster,
+  category = "İntellektual",
+  altCategory = "Şahmat",
+  remainingSpots = 12,
+  title = "Şahmat",
+  targetAudience,
+  location = "AzFar satdionu ",
+  time = "21.04.2025, 11:00",
+  deadline = "18.04.2025",
+  applyLink,
+}) {
   return (
-    <>
-      <div className="activity_card">
-        <div className="post_pic">
-          <img src={poster} alt="" />
-        </div>
-        <div className="post_desc">
-          <div className="topPart">
-            <p className="post_category">İntellektual - Şahmat</p>
-            <p className="post_limit">Qalan yer sayı: 6</p>
-          </div>
-          <p className="post_title">Şahmat yarışı</p>
-          <p className="post_target">Tələbələr üçün</p>
-        </div>
-        <div className="post_info">
-          <p className="post_location">
-            <img src={location} alt="" /> Turing Academy
-          </p>
-          <p className="post_time">
-            <img src={clock} alt="" /> 29.03.2025, 14:00
-          </p>
-        </div>
-        <p className="post_register_time">
-          <img src={calendar} alt="" /> Qeydiyyat üçün son tarix: 25.03.2025
-        </p>
+    <div className="activity_card">
+      <div className="post_image">
+        <img src={image} alt="Activity" />
       </div>
-    </>
+      <div className="post_desc">
+        <div className="topPart">
+          <p>
+            {category} - {altCategory}
+          </p>
+          <p>Qalan yer sayı: {remainingSpots}</p>
+        </div>
+        <p className="post_title">{title}</p>
+        <p className="post_target">{targetAudience}</p>
+        <div className="post_info">
+          <div className="topPart">
+            <p className="post_location">
+              <img src={locationIcon} alt="Location" />
+              {location}
+            </p>
+            <p className="post_time">
+              <img src={clockIcon} alt="Time" />
+              {time}
+            </p>
+          </div>
+          <div className="bottomPart">
+            <p className="post_date">
+              <img src={calendarIcon} alt="Calendar" />
+              Son tarix: {deadline}
+            </p>
+          </div>
+        </div>
+      </div>
+      <Link className="apply" to={applyLink}>
+        Müraciət
+      </Link>
+    </div>
   );
 }
 
