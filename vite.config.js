@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  root: '.',  // index.html-in kök qovluqda olduğunu göstərir
   build: {
     outDir: 'dist'
   }
