@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 const categories = [
   { icon: teacher, label: "Təhsil" },
   { icon: flash, label: "Əyləncə" },
-  { icon: cup, label: "İntellektual" },
+  { icon: cup, label: "İntellektuall" },
 ];
 
 const Events = () => {
