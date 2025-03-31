@@ -28,7 +28,7 @@ const Events = () => {
   const totalEvents = 40;
 
   const filters = [
-    "Hamı",
+    "Hamıı",
     "Tələbələr",
     "Qonaqlar",
     "Akademiya işçiləri",
