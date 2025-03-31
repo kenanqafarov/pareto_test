@@ -1,0 +1,110 @@
+.event_container {
+  margin: 60px auto;
+  width: 95%;
+  display: flex;
+  gap: 200px;
+  > .leftPart {
+    display: flex;
+    gap: 60px;
+    > .event_post {
+      > img {
+        height: 618px;
+        width: 400px;
+      }
+    }
+    > .postDesc {
+      > .postDetails {
+        > .top {
+          display: flex;
+          gap: 40px;
+          > p {
+            padding: 6px 20px;
+            border: 1px solid #f40;
+            border-radius: 17px;
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+
+            gap: 4px;
+          }
+        }
+        > .bottom {
+          margin-top: -20px;
+          gap: 40px;
+
+          display: flex;
+          > p {
+            padding: 6px 20px;
+            border: 1px solid #f40;
+            border-radius: 17px;
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            gap: 4px;
+            > span {
+              font-weight: 500;
+
+              color: #f40;
+            }
+          }
+        }
+      }
+      > .postTitle {
+        font-size: 50px;
+        color: #0d1b4d;
+        margin-top: 5px;
+        font-weight: 500;
+      }
+      > .lastDate {
+        margin-top: -40px;
+        font-style: italic;
+        font-size: 16px;
+        color: #0d1b4d;
+      }
+      > .postDesc {
+        color: #0d1b4d;
+        font-style: 20px;
+        margin-top: 50px;
+        font-weight: 300;
+        max-width: 1050px;
+        width: 100%;
+      }
+      > .postIconsBottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        > p {
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          > img {
+            height: 25px;
+          }
+        }
+      }
+      > .register-btn {
+        color: white;
+        text-align: center;
+        padding: 20px 10px;
+        font-weight: 600;
+        background-color: #0d1b4d;
+        border-radius: 8px;
+        transition: 0.6s ease;
+        &:hover {
+          cursor: pointer;
+          background-color: #081236;
+          transform: scale(0.98);
+        }
+      }
+    }
+  }
+  > .rightPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}

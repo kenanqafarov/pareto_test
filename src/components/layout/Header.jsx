@@ -8,6 +8,8 @@ import logo from "../../assets/images/general/logo.png";
 // Style
 import "../../assets/style/header/header.css";
 
+import { Link } from "react-router-dom";
+
 function Header() {
   return (
     <>
@@ -17,6 +19,8 @@ function Header() {
             <img src={logo} alt="" />
           </div>
           <div className="right_part">
+            <a href="/gallery">Qaleriya</a>
+            <a href="/events">Tədbirlər</a>
             <div className="notification_icon_part">
               <img
                 src={notification_icon}

@@ -17,9 +17,9 @@ import teacher from "../assets/images/home_page/icons/teacher.svg";
 import { Link } from "react-router-dom";
 
 const categories = [
-  { icon: teacher, label: "Təhsil" },
-  { icon: flash, label: "Əyləncə" },
-  { icon: cup, label: "İntellektual" },
+  { icon: teacher, state: "active", label: "Təhsil" },
+  { icon: flash, state: "deactive", label: "Əyləncə" },
+  { icon: cup, state: "deactive", label: "İntellektual" },
 ];
 
 const Home = () => {
@@ -45,7 +45,7 @@ const Home = () => {
 
       <div className="categories">
         {categories.map((category, index) => (
-          <p key={index} className="category">
+          <p key={index} className={`category ${category.state}`}>
             <img src={category.icon} alt={category.label} /> {category.label}
           </p>
         ))}
@@ -93,6 +93,26 @@ const Home = () => {
             ))}
           </div>
           <Link className="more-btn" to="/events">
+            Daha çox
+          </Link>
+          <p className="galery-title">Qaleriya</p>
+          <div className="galery-container">
+            <div className="leftPart">
+              <div className="topPart"></div>
+              <div className="bottomPart"></div>
+            </div>
+            <div className="rightPart">
+              <div className="topPart"></div>
+              <div className="bottomPart">
+                <div className="left">
+                  <div className="top"></div>
+                  <div className="bottom"></div>
+                </div>
+                <div className="right"></div>
+              </div>
+            </div>
+          </div>
+          <Link className="more" to="/gallery">
             Daha çox
           </Link>
         </div>

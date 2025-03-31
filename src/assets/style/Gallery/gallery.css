@@ -1,0 +1,99 @@
+.galery-container-page {
+  display: flex;
+  flex-direction: column;
+  &:nth-child(odd) {
+    transform: translateX(90deg);
+  }
+  .galery-images {
+    display: flex;
+    gap: 10px;
+    margin-left: 200px;
+    margin-top: 10px;
+
+    > .leftPart {
+      .topPart {
+        background: url("../../images/galery/Galery-1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 550.69px;
+        width: 400px;
+      }
+      .bottomPart {
+        background: url("../../images/galery/Galery-5.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 10px;
+        height: 240.69px;
+        width: 400px;
+      }
+    }
+    > .rightPart {
+      .topPart {
+        background: url("../../images/galery/Galery-2.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        width: 780px;
+        height: 300px;
+      }
+      .bottomPart {
+        display: flex;
+        > .left {
+          > .top {
+            height: 240px;
+            width: 400px;
+            background: url("../../images/galery/Galery-3.png");
+            margin-top: 10px;
+          }
+          > .bottom {
+            height: 240px;
+            width: 400px;
+            background: url("../../images/galery/Galery-7.png");
+            margin-top: 10px;
+          }
+        }
+        > .right {
+          margin-top: 10px;
+          margin-left: 10px;
+          width: 100%;
+          height: 490px;
+          background-color: red;
+          background: url("../../images/galery/Galery-6.png");
+          background-repeat: no-repeat;
+          background: cover;
+        }
+      }
+    }
+  }
+}
+
+.title_galery {
+  color: #0d1b4d;
+  font-family: "Poppins";
+  font-size: 26px;
+  font-weight: 450;
+  margin-top: 80px;
+  margin-left: 200px;
+}
+
+.more-images-page-btn {
+  text-decoration: none;
+  padding: 10px 40px;
+  gap: 10px;
+  margin: 50px auto;
+  border-radius: 8px;
+  margin-left: 670px;
+  border: 1px solid var(--Turing-Blue, #0d1b4d);
+  color: #0d1b4d;
+  transition: 0.4s ease;
+  &:hover {
+    cursor: pointer;
+    background-color: #0d1b4d;
+    color: white;
+  }
+}
+
+.galery-images:nth-child(even) {
+  margin-right: 20px;
+  transform: rotateY(180deg);
+}

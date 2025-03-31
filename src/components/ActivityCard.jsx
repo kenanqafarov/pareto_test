@@ -20,7 +20,7 @@ function ActivityCard({
   location = "AzFar satdionu ",
   time = "21.04.2025, 11:00",
   deadline = "18.04.2025",
-  applyLink,
+  applyLink = "/event-details",
 }) {
   return (
     <div className="activity_card">
